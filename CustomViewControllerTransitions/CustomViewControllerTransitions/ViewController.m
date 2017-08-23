@@ -1,29 +1,51 @@
-//
-//  ViewController.m
-//  CustomViewControllerTransitions
-//
-//  Created by melanu1991 on 23.08.17.
-//  Copyright © 2017 melanu1991. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "PresentAnimation.h"
+#import "DismissAnimation.h"
 
-@interface ViewController ()
+@interface ViewController () <UIViewControllerTransitioningDelegate>
+
+@property (strong, nonatomic) PresentAnimation *presentAnimation;
+@property (strong, nonatomic) DismissAnimation *dismissAnimation;
 
 @end
 
 @implementation ViewController
 
+- (PresentAnimation *)presentAnimation {
+    if (!_presentAnimation) {
+        _presentAnimation = [PresentAnimation new];
+    }
+    return _presentAnimation;
+}
+
+- (DismissAnimation *)dismissAnimation {
+    if (!_dismissAnimation) {
+        _dismissAnimation = [DismissAnimation new];
+    }
+    return _dismissAnimation;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)back:(UIStoryboardSegue *)sender {
+    
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ModalSegue"]) {
+        UIViewController *dvc = segue.destinationViewController;
+        dvc.transitioningDelegate = self;
+    }
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return self.presentAnimation;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return self.dismissAnimation;
+}
 
 @end
