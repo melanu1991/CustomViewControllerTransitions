@@ -1,6 +1,6 @@
-#import "DismissAnimation.h"
+#import "PopAnimation.h"
 
-@implementation DismissAnimation
+@implementation PopAnimation
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 1.f;
@@ -12,11 +12,11 @@
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     
-    toView.alpha = 0.f;
+    toView.frame = CGRectMake(-toView.bounds.size.width, 0.f, toView.bounds.size.width, toView.bounds.size.height);
     [containerView addSubview:toView];
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        toView.alpha = 1.f;
+        toView.frame = CGRectMake(0.f, 0.f, toView.bounds.size.width, toView.bounds.size.height);
     } completion:^(BOOL finished){
         [fromView removeFromSuperview];
         [transitionContext completeTransition:finished];

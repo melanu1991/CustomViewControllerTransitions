@@ -14,8 +14,9 @@
 		5854D2601F4DE71E00D4128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5854D25F1F4DE71E00D4128C /* Assets.xcassets */; };
 		5854D2631F4DE71E00D4128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5854D2611F4DE71E00D4128C /* LaunchScreen.storyboard */; };
 		5854D26C1F4DF32800D4128C /* PresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854D26B1F4DF32800D4128C /* PresentAnimation.m */; };
-		5854D26F1F4DF59300D4128C /* FirstAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854D26E1F4DF59300D4128C /* FirstAnimationViewController.m */; };
 		5854D2721F4DFE1000D4128C /* DismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854D2711F4DFE1000D4128C /* DismissAnimation.m */; };
+		5854D2751F4E095600D4128C /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854D2741F4E095600D4128C /* PushAnimation.m */; };
+		5854D2781F4E0E3300D4128C /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854D2771F4E0E3300D4128C /* PopAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +32,12 @@
 		5854D2641F4DE71E00D4128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5854D26A1F4DF32800D4128C /* PresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentAnimation.h; sourceTree = "<group>"; };
 		5854D26B1F4DF32800D4128C /* PresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentAnimation.m; sourceTree = "<group>"; };
-		5854D26D1F4DF59300D4128C /* FirstAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstAnimationViewController.h; sourceTree = "<group>"; };
-		5854D26E1F4DF59300D4128C /* FirstAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstAnimationViewController.m; sourceTree = "<group>"; };
 		5854D2701F4DFE1000D4128C /* DismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimation.h; sourceTree = "<group>"; };
 		5854D2711F4DFE1000D4128C /* DismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissAnimation.m; sourceTree = "<group>"; };
+		5854D2731F4E095600D4128C /* PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		5854D2741F4E095600D4128C /* PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
+		5854D2761F4E0E3300D4128C /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		5854D2771F4E0E3300D4128C /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +74,14 @@
 				5854D2571F4DE71E00D4128C /* AppDelegate.m */,
 				5854D2591F4DE71E00D4128C /* ViewController.h */,
 				5854D25A1F4DE71E00D4128C /* ViewController.m */,
-				5854D26D1F4DF59300D4128C /* FirstAnimationViewController.h */,
-				5854D26E1F4DF59300D4128C /* FirstAnimationViewController.m */,
+				5854D2731F4E095600D4128C /* PushAnimation.h */,
+				5854D2741F4E095600D4128C /* PushAnimation.m */,
 				5854D26A1F4DF32800D4128C /* PresentAnimation.h */,
 				5854D26B1F4DF32800D4128C /* PresentAnimation.m */,
 				5854D25C1F4DE71E00D4128C /* Main.storyboard */,
 				5854D25F1F4DE71E00D4128C /* Assets.xcassets */,
+				5854D2761F4E0E3300D4128C /* PopAnimation.h */,
+				5854D2771F4E0E3300D4128C /* PopAnimation.m */,
 				5854D2701F4DFE1000D4128C /* DismissAnimation.h */,
 				5854D2711F4DFE1000D4128C /* DismissAnimation.m */,
 				5854D2611F4DE71E00D4128C /* LaunchScreen.storyboard */,
@@ -167,8 +172,9 @@
 			files = (
 				5854D25B1F4DE71E00D4128C /* ViewController.m in Sources */,
 				5854D2581F4DE71E00D4128C /* AppDelegate.m in Sources */,
-				5854D26F1F4DF59300D4128C /* FirstAnimationViewController.m in Sources */,
+				5854D2751F4E095600D4128C /* PushAnimation.m in Sources */,
 				5854D2721F4DFE1000D4128C /* DismissAnimation.m in Sources */,
+				5854D2781F4E0E3300D4128C /* PopAnimation.m in Sources */,
 				5854D26C1F4DF32800D4128C /* PresentAnimation.m in Sources */,
 				5854D2551F4DE71E00D4128C /* main.m in Sources */,
 			);
