@@ -22,25 +22,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-yh-nJO">
-                                <rect key="frame" x="20" y="280.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="250.5" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.88557942710000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hgl-aG-e53"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Present transition"/>
                                 <connections>
                                     <segue destination="LQw-rW-kLz" kind="presentation" identifier="ModalSegue" id="3RP-xG-HtK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OZ-uI-o9o">
-                                <rect key="frame" x="20" y="318.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="308.5" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.88557942710000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tYM-by-eBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Push transition"/>
                                 <connections>
                                     <segue destination="7YP-Kl-7Ci" kind="show" identifier="PushSegue" id="sNw-xv-oAz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-aP-b04">
-                                <rect key="frame" x="20" y="356" width="335" height="30"/>
+                                <rect key="frame" x="20" y="366" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.88557942710000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xWL-xl-zxU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Interactive transition"/>
+                                <connections>
+                                    <segue destination="NI7-50-Abb" kind="show" identifier="InteractionSegue" id="EE4-BS-zyw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6K-sP-X4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="817"/>
+            <point key="canvasLocation" x="1841" y="894"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tKD-J2-1Lf">

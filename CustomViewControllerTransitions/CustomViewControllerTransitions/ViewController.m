@@ -3,6 +3,7 @@
 #import "DismissAnimation.h"
 #import "PushAnimation.h"
 #import "PopAnimation.h"
+#import "CustomInteractionController.h"
 
 @interface ViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -11,6 +12,7 @@
 @property (strong, nonatomic) PushAnimation *pushAnimation;
 @property (strong, nonatomic) PopAnimation *popAnimation;
 @property (assign, nonatomic, getter = isReverse) BOOL reverse;
+@property (strong, nonatomic) CustomInteractionController *interactionController;
 
 @end
 
@@ -44,6 +46,13 @@
     return _popAnimation;
 }
 
+- (CustomInteractionController *)interactionController {
+    if (!_interactionController) {
+        _interactionController = [CustomInteractionController new];
+    }
+    return _interactionController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.delegate = self;
@@ -57,6 +66,10 @@
     if ([segue.identifier isEqualToString:@"ModalSegue"]) {
         UIViewController *dvc = segue.destinationViewController;
         dvc.transitioningDelegate = self;
+    }
+    else if ([segue.identifier isEqualToString:@"InteractionSegue"]) {
+        UIViewController *dvc = segue.destinationViewController;
+        [self.interactionController wireToViewController:dvc];
     }
 }
 
@@ -77,6 +90,13 @@
         self.reverse = YES;
         return self.pushAnimation;
     }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    if (self.interactionController.isInteractionInProgress) {
+        return self.interactionController;
+    }
+    return nil;
 }
 
 @end
